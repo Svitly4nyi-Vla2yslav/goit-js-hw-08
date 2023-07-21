@@ -29,7 +29,7 @@ function renderGallery() {
 }
 
 function openModal(imgSource) {
-  const modal = basicLightbox.create(`
+  const modal = SimpleLightbox.create(`
         <img src='${imgSource}' />
    `);
     modal.show();
@@ -60,4 +60,4 @@ document
   .addEventListener('click', handleGalleryClick);
 window.addEventListener('DOMContentLoaded', renderGallery);
 console.log(galleryItems);
-console.log(galleryItems);
+
