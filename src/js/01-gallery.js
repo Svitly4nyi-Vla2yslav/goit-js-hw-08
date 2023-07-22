@@ -25,14 +25,17 @@ function renderGallery() {
     .join('');
   gallery.insertAdjacentHTML('beforeend', galleryList);
 }
-document.addEventListener('DOMContentLoaded', function () {
+
   
   renderGallery();
 
   const lightbox = new SimpleLightbox('.gallery a', {
     captions: true,
+    captionType: 'attr',
+    captionsData: 'alt',
+    captionPosition: 'bottom',
     captionDelay: 250,
   });
-});
-console.log(galleryItems);
+
+
 
